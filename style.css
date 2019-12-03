@@ -1,12 +1,14 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+
+*, :after, :before {
+    box-sizing: border-box;
+}
 
 /*
  BARVY
  pozadi     #f5f5f5
  Jedeme retro cernobile, dnes barvy nepotrebujeme.
 */
-
 
 body {
     margin: 0;
@@ -16,7 +18,6 @@ body {
     font-size: 16px;
     line-height: 1.6;
 }
-
 
 /* HLAVICKA */
 
@@ -41,18 +42,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(images/island-hlavicka.jpg);
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/island-hlavicka.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     max-height: 400px;
-  }
+}
 
- h1 {
-     margin-bottom: 10px;
- } 
-
+h1 {
+    margin-bottom: 10px;
+}
 
 /* MENU */
 
@@ -86,7 +86,6 @@ h2 {
     padding-left: 25px;
 }
 
-
 /* OBSAH */
 
 img {
@@ -102,16 +101,15 @@ p {
     font-family: 'Raleway', serif;
     text-align: center;
     padding: 0;
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 20px;
     color: gray;
     font-size: 0.8em;
 }
 
-
 /* FOTOGALERIE */
 
-.foto > .popisek  {
+.foto>.popisek {
     font-weight: 700;
 }
 
@@ -129,11 +127,121 @@ p {
 footer {
     color: gray;
     background-color: #e2dfdf;
-    background: linear-gradient(#8f8f8f, #e2dfdf 11%);
+    background: linear-gradient(#adadad, #e7e5e5 11%);
 }
 
-footer > p {
+footer>p {
     margin-top: 0;
     padding-top: 15px;
     font-size: 0.7em;
+}
+
+/************/
+/* VERZE PRO TABLETY */
+/************/
+
+
+@media (min-width: 500px) {
+
+/* HLAVICKA */
+
+    .hlavicka {
+        min-height: 300px;
+        max-height: 400px;
+    }
+
+/* MENU */
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin: 30px;
+        border-bottom: solid #cecccc 1px;
+        border-top: solid #cecccc 1px;
+    }
+    .amenu {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        border-left: solid #cecccc 1px;
+    }
+
+    li:first-child {
+        border-left: none
+    }
+
+/* OBSAH */
+
+    p {
+        font-size: 1.45em;
+        padding: 12px 35px;
+    }
+
+    h2 {
+        padding: 0px 35px;
+        font-size: 2em;
+    }
+
+    .obsah {
+       position: absolute;
+       right: 0;
+    }
+
+/* FOTOGALERIE */
+
+    
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .foto {
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .galerie img {
+        display: block;
+    }
+
+    .galerie .popisek {
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.4);
+        text-align: center;
+        width: 100%;
+        color: gainsboro;
+        padding: 20px;
+        transition: transform ease-out 0.3s;
+        font-size: 1em;
+    }
+
+    .popisek-copy a {
+        color: gainsboro;
+    }
+
+    .foto:hover .popisek {
+        transform: translate(0, -100%);
+    }
+
+}
+
+/************/
+/* VERZE PRO DESKTOPY */
+/************/
+
+@media (min-width: 960px) {
+
+/* HLAVICKA */
+
+
+
 }
