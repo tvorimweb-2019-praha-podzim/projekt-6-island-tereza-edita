@@ -17,6 +17,7 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    position: relative;
 }
 
 /* HLAVICKA */
@@ -181,7 +182,7 @@ footer>p {
 /* OBSAH */
 
     p {
-        font-size: 1.45em;
+        font-size: 1em;
         padding: 12px 35px;
     }
 
@@ -219,7 +220,7 @@ footer>p {
         text-align: center;
         width: 100%;
         color: gainsboro;
-        padding: 20px;
+        padding: 15px;
         transition: transform ease-out 0.3s;
         font-size: 1em;
     }
@@ -240,8 +241,50 @@ footer>p {
 
 @media (min-width: 960px) {
 
+.main {
+    width: 960px;
+    margin: auto;
+    box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.75);
+    padding: 0;
+    margin-top: -50px;
+    z-index: 5;
+    position: relative;
+}
+
 /* HLAVICKA */
 
+.hlavicka {
+    width: 100vw;
+    min-height: 400px;
+}
 
+.hlavicka .perex{
+    width: 60%;
+}
 
+.hlavicka .autor{
+    font-size: 1em;
+}
+
+/* MENU */
+
+/* li {
+    display: list-item;
+}
+
+.amenu {
+    display: list-item;
+} */
+
+/* OBSAH */
+
+p {
+    padding-left: 150px;
+}
+
+/* GALERIE */
+
+.foto {
+    width: 33.333334%;
+}
 }
