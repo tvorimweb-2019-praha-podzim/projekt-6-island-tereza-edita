@@ -17,7 +17,6 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
-    position: relative;
 }
 
 /* HLAVICKA */
@@ -31,12 +30,15 @@ body {
 .perex {
     color: white;
     margin: 0px 30px;
+    padding: 0;
 }
 
 .autor {
     color: rgb(211, 204, 204);
     font-size: 0.8em;
     font-style: italic;
+    padding: 0px;
+    padding-top: 20px;
 }
 
 .hlavicka {
@@ -44,7 +46,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/island-hlavicka.jpg);
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -181,6 +183,10 @@ footer>p {
 
 /* OBSAH */
 
+    img {
+        position: relative;
+    }
+
     p {
         font-size: 1em;
         padding: 12px 35px;
@@ -193,7 +199,15 @@ footer>p {
 
     .obsah {
        position: absolute;
-       right: 0;
+        right: 0px;
+        margin-top: -40px;
+        margin-right: 15px;
+        color: gainsboro;
+        font-size: 0.7em;
+    }
+
+    .obsah a {
+        color: gainsboro;
     }
 
 /* FOTOGALERIE */
@@ -241,21 +255,18 @@ footer>p {
 
 @media (min-width: 960px) {
 
-.main {
-    width: 960px;
-    margin: auto;
-    box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.75);
-    padding: 0;
-    margin-top: -50px;
-    z-index: 5;
-    position: relative;
-}
 
 /* HLAVICKA */
 
+.titulek {
+    font-size: 5em;
+}
+
 .hlavicka {
     width: 100vw;
-    min-height: 400px;
+    min-height: 450px;
+    position: relative;
+    z-index: 1;
 }
 
 .hlavicka .perex{
@@ -266,21 +277,55 @@ footer>p {
     font-size: 1em;
 }
 
+.main {
+    width: 960px;
+    margin: auto;
+    box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.75);
+    padding: 0;
+    margin-top: 0;
+    z-index: 100;
+    position: relative;
+    margin-top: -70px;
+    background-color: white;
+    padding-top: 20px;
+}
+
 /* MENU */
 
-/* li {
-    display: list-item;
+ul {
+    display: block;
+    margin: 0;
+    width: 20%;
+    border: 0;
+    position: absolute;
+    padding-top: 32px;
+    padding-left: 35px;
 }
 
 .amenu {
-    display: list-item;
-} */
+    display: inline-block;
+    margin: 0;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+    font-size: 0.8em;
+    border-bottom: solid #cecccc 1px;
+}
+li {
+    display: unset;
+    border: none;
+    width: 30%;
+}
+
 
 /* OBSAH */
 
 p {
-    padding-left: 150px;
+    padding-left: 250px;
 }
+
+.popisek 
 
 /* GALERIE */
 
