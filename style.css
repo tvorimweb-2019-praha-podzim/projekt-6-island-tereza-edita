@@ -24,21 +24,22 @@ body {
 .titulek {
     font-family: 'Raleway', serif;
     color: white;
-    font-size: 2.8em;
+    font-size: 3em;
+    text-shadow: 1px 1px gray;
 }
 
 .perex {
     color: white;
     margin: 0px 30px;
     padding: 0;
+    text-shadow: 0.5px 0.5px gray;
 }
 
 .autor {
     color: rgb(211, 204, 204);
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-style: italic;
-    padding: 0px;
-    padding-top: 20px;
+    padding: 0px 0 10px 0;
 }
 
 .hlavicka {
@@ -57,6 +58,16 @@ h1 {
     margin-bottom: 10px;
 }
 
+.perex::after {
+    content: "" ;
+    width: 65px;
+    height: 2px;
+    display: block;
+    background-color: gainsboro;
+    margin: auto;
+    margin-top: 20px;
+}
+
 /* MENU */
 
 ul {
@@ -65,7 +76,7 @@ ul {
 
 li {
     list-style: none;
-    padding: 0 35px;
+    padding: 0 30px;
 }
 
 a {
@@ -84,19 +95,29 @@ a {
     border-bottom: solid rgb(204, 203, 203) 1px;
 }
 
+/* OBSAH */
+
 h2 {
     font-family: 'Raleway', serif;
     padding-left: 25px;
 }
 
-/* OBSAH */
+h2::after {
+    content: "" ;
+    width: 70px;
+    height: 3px;
+    display: block;
+    background-color: teal;
+    margin-top: 10px;
+    margin-left: -35px;
+}
 
 img {
     width: 100%;
 }
 
 p {
-    padding: 10px 25px;
+    padding: 0px 30px;
     font-size: 0.8em;
 }
 
@@ -153,6 +174,14 @@ footer>p {
         max-height: 400px;
     }
 
+    .titulek {
+        font-size: 4em;
+    }
+
+    .autor {
+        font-size: 0.8em;
+    }
+
 /* MENU */
 
     ul {
@@ -166,7 +195,7 @@ footer>p {
     .amenu {
         display: inline-block;
         margin: 0;
-        padding: 0;
+        padding: 0px 5px;
         border: none;
     }
     li {
@@ -280,7 +309,7 @@ footer>p {
 .main {
     width: 960px;
     margin: auto;
-    box-shadow: 0px 11px 24px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.75);
     padding: 0;
     margin-top: 0;
     z-index: 100;
@@ -322,10 +351,27 @@ li {
 /* OBSAH */
 
 p {
-    padding-left: 250px;
+    padding-left: 230px;
 }
 
-.popisek 
+.right {
+    padding-left: 35px;
+    padding-right: 230px;
+}
+
+.videt {
+    padding-left: 230px;
+}
+
+.videt::after {
+    content: "" ;
+    width: 70px;
+    height: 3px;
+    display: block;
+    background-color: teal;
+    margin-top: 10px;
+    margin-left: -35px;
+}
 
 /* GALERIE */
 
